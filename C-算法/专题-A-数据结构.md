@@ -1055,7 +1055,7 @@ public:
         // 因为是链表，所以可以重新开一个新的链表来保存排序好的部分；
         // 不存在空间上的问题，这一点不像数组
         auto H = new ListNode(0);
-        
+        H->next=h;
         auto pre = H;
         auto cur = h;
         ListNode* nxt;
@@ -1187,7 +1187,7 @@ public:
             p = h;
             
             // 把大的元素“冒泡”到尾部去
-            while (p->next && p->next != p) {
+            while (p->next && p->next != q) {
                 if (p->val > p->next->val) {  // 如果已经有序，则退出循环
                     swap(p->val, p->next->val);
                     changed = true;
