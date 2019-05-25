@@ -766,7 +766,7 @@ public:
             else if (rotateArray[mid] < rotateArray[hi])
                 hi = mid;
             else
-                hi--;         // 防止这种情况 {3,4,5,1,2,3}
+                hi--;          // 防止这种情况 {3,4,5,1,2,3}
         }
         
         return rotateArray[hi];
